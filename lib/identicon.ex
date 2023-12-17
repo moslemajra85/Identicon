@@ -8,13 +8,15 @@ defmodule Identicon do
   end
 
 
-  def pick_color(image) do
+  def pick_color(   %Identicon.Image{hex: [r, g,b | _tail]} = image) do
         #  %Identicon.Image{hex: hext_list} = image
         #  [r, g, b | _] = hext_list
         #  [r, g, b]
 
-        %Identicon.Image{hex: [r, g,b | _]} = image
-        [r,g,b]
+
+
+       %Identicon.Image{image | color: {r, g, b}}
+
   end
 
   def hash_input(input) do
