@@ -4,9 +4,18 @@ defmodule Identicon do
   """
 
   def main(input) do
-      input |> hash_input()
+      input |> hash_input() |> pick_color()
   end
 
+
+  def pick_color(image) do
+        #  %Identicon.Image{hex: hext_list} = image
+        #  [r, g, b | _] = hext_list
+        #  [r, g, b]
+
+        %Identicon.Image{hex: [r, g,b | _]} = image
+        [r,g,b]
+  end
 
   def hash_input(input) do
 
