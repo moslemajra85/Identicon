@@ -28,3 +28,6 @@ iex>
 
 
 ```
+We will use the __first three items__ of the generated hash list in order to pick up a color for our identicon. since every item is a number between 0 and 256 we could easily use any three items to generate an rgb color.
+
+ `e.g: rgb(31, 56, 112)`

@@ -4,9 +4,18 @@ defmodule Identicon do
   """
 
   def main(input) do
-      input |> hash_input() |> pick_color()
+      input |> hash_input() |> pick_color() |> build_grid()
   end
 
+
+  def build_grid(%Identicon.Image{hex: hex} = image) do
+
+        hex |> Enum.chunk_every(3, 3, :discard) |> mirro_row()
+  end
+
+  def mirro_row(chunks) do
+    for chunk <- chunks, [first, second | _third] = chunk do chunk ++ [second, first] end
+  end
 
   def pick_color(   %Identicon.Image{hex: [r, g,b | _tail]} = image) do
         #  %Identicon.Image{hex: hext_list} = image
