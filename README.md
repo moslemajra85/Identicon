@@ -6,10 +6,21 @@ The Goal of of this utility app is to generate an **identicon** out of a **given
 
 ![identicon1](assets/ide1.png)
 ![identicon2](assets/ide2.png)
-![identicon3](assets/ide3.png)
-![identicon3](assets/ide4.png)
 
 **Features**
 
 - 5 by 5 grid of squares
 - Each square on the grid has height and width of 50px
+
+## Usage
+```elixit
+# Give the main function a string argument (e.g your name)
+iex> Identicon.main("Mossy")
+
+```
+## Screenshots
+![screen1](assets/s1.png)
+![screen1](assets/s2.png)
+
+
+
